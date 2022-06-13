@@ -1,0 +1,48 @@
+<!-- <app-seller-dash-header></app-seller-dash-header> -->
+
+<div class="container mt-4">
+  <!--Header-->
+  <div class="mb-2">
+    <h3 class="text-center"><b>View Products</b></h3>
+    <div class="text-right">
+        <a href="/seller-view-product" class="btn btn-primary" role="button" onclick="window.print()">
+          <b>Print</b>
+        </a>
+    </div>
+  </div>
+
+  <!--- Table to Display Product Details-->
+  <div class=".table-responsive{-sm|-md|-lg|-xl}">
+    <div class="card" style="border-radius: 10px;">
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr class="bg-dark text-white">
+            <th scope="col">Product ID</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Description</th>
+            <th scope="col">Product Price</th>
+            <th scope="col">Product Category</th>
+            <th scope="col">Product Status</th>
+            <th scope="col">Product Discount</th>
+            <th scope="col"> Seller Id</th>
+            <th scope="col">Product Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td scope="row"> {{product.prodId}} </td>
+            <td> {{product.prodName}} </td>
+            <td> {{product.prodDesc}} </td>
+            <td> {{product.prodPrice}} </td>
+            <td> {{product.prodCategory}} </td>
+            <td> {{product.prodStatus}} </td>
+            <td> {{product.prodDiscount}} </td>
+            <td> {{product.sellerId}} </td>
+            <td><img src="{{product.prodImage}}" class="img-thumbnail" alt="laptop"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  

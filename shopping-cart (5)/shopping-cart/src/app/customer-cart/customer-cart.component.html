@@ -1,0 +1,45 @@
+
+<!--nav bar-->
+<app-customer-inner-navbar> </app-customer-inner-navbar>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container bg-white rounded-top mt-5" id="zero-pad">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-10 col-12 pt-3">
+            <div class="d-flex flex-column pt-4">
+                <div><h3 class="text-uppercase font-weight-normal">My Cart</h3></div>
+            </div>
+            <div class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile">
+                <div class="d-flex flex-row align-items-center">
+                    <div><img src="{{product.prodImage}}" width="150" height="150" alt="" id="image"></div>
+                    <div class="d-flex flex-column pl-md-3 pl-1">
+                        <div><h2>{{product.prodName}}</h2> </div>
+                        <div><span class="pl-3"> {{product.prodDesc}}</span></div>
+                    </div>                    
+                </div>
+                <div class="pl-md-0 pl-1"> <h2><b>₹ {{product.prodPrice}}</b> </h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container bg-light rounded-bottom py-4" id="zero-pad">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-10 col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <a href="/products" class="btn btn-sm bg-light border border-dark">GO BACK</a>
+                </div>
+                <div>
+                    <a style="color: white" (click)="buyNow()" class="btn btn-primary">Buy Now</a>
+                </div>
+                <div class="px-md-0 px-1" id="footer-font">
+                    <b class="pl-md-4">SUBTOTAL<span class="pl-md-4" style="font-size: 16px;">₹ {{product.prodPrice}}</span></b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br> <br>

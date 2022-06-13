@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.main{
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-100%,-50%);
+}
+
+input{
+    border: 3px solid darkblue;
+    height: 40px;
+    width: 300px;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+
+.btn{
+    color: blue;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-container{
+    text-align: center;
+    max-width: 1080px;
+    margin: auto;
+    margin-top: 3%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 50px;
+    position: relative;
+    line-height: 40px;
+    color: black;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.col-1 {
+    flex-basis: 25%;
+    padding: 15px;
+    min-width: 250px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;  
+}
+
+.col-1 img{
+    width: 100%;
+}
+
+.col-1:hover {
+    transform: translateY(-5px)
+}
+
+.title::after{
+    content: '';
+    background: #ff0000;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+
+.buttons{
+    margin: 8%;
+    padding: 3%;
+    width: 200px;
+    text-align: center;
+    background: lightblue;
+    color: black;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    user-select: none;
+    transition: .25s;
+    position: relative;
+}
+
+.buttons i{
+    color: #ff0000;
+    font-size: 17px;
+    position: absolute;
+    top: 48.5%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    transition: .25s;
+}
+
+.buttons span{
+    font-weight: bold;
+    font-size: 15px; 
+    text-transform: uppercase;
+    margin-left: 20px;
+    transition: .25s;
+    font-family: nike combat stencil;
+    clip-path: circle(200px at 125px 27.5px);
+}
+
+.buttons:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+
+.buttons:hover i{
+    left: 50%;
+}
+
+.buttons:hover span{
+    clip-path: circle(0px at 125px 27.5px);
+}
+

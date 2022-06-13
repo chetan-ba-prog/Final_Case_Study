@@ -1,0 +1,27 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.card {  
+    padding: 5%;  
+    border: 1px solid #ced4da;  
+    margin-bottom: 2%;  
+}  
+
+/* Set a style for the submit button */
+.btn {
+  background-color: navyblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.signin {
+  text-align: center;
+}

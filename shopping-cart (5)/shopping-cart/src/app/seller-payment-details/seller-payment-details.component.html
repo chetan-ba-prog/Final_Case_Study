@@ -1,0 +1,37 @@
+<!-- <app-seller-dash-header></app-seller-dash-header> -->
+
+<body>
+    <div class="container mt-4">
+        <div class="mb-2">
+            <h3 class="text-center"><b>Payment Details</b></h3>
+            <div class="text-right">
+                <a href="#" class="btn btn-primary" role="button" onclick="window.print()"><b>Print</b></a>
+            </div> 
+        </div>
+        <div class=".table-responsive{-sm|-md|-lg|-xl}">
+            <div class="card" style="border-radius: 10px;">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr class="bg-dark text-white">
+                    <th scope="col">Payment ID</th>
+                    <th scope="col">Payment Method</th>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Product ID</th>
+                    <th scope="col">Total Price</th>
+                    <th scope="col">Seller Id</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let payment of payments">
+                        <td scope="row"> {{payment.paymentId}} </td>
+                        <td> {{payment.paymentMethod}} </td>
+                        <td> {{payment.custId}} </td>
+                        <td> {{payment.prodId}} </td>
+                        <td> {{payment.totalPrice}} </td>
+                        <td> {{payment.sellerId}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

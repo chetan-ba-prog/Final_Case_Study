@@ -1,0 +1,44 @@
+<!--NavBar-->
+<!-- <app-seller-dash-header></app-seller-dash-header> -->
+
+<div class="container mt-4">
+
+    <!-- Header-->
+    <div class="mb-2">
+        <h3 class="text-center"><b> Orders </b></h3>
+        <div class="text-right">
+            <a href="/customers-list" class="btn btn-primary" role="button" onclick="window.print()"><b>Print</b></a>
+        </div> 
+    </div>
+
+    <!-- Display Users Details-->
+    <div class=".table-responsive{-sm|-md|-lg|-xl}">
+        <div class="card" style="border-radius: 10px;">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr class="bg-dark text-white">
+                        <th scope="col">Order Id</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Product Id</th>
+                        <th scope="col">Customer Id</th>
+                        <th scope="col">Paymment Id</th>
+                        <th scope="col">Seller Id</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of orders">
+                        <td scope="row"> {{order.orderId}} </td>
+                        <td> {{order.orderDate}} </td>
+                        <td> {{order.prodId }} </td>
+                        <td> {{order.custId}} </td>
+                        <td> {{order.paymentId}} </td>
+                        <td> {{order.sellerId}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

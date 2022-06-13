@@ -1,0 +1,36 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--nav bar-->
+<app-customer-inner-navbar> </app-customer-inner-navbar>
+
+<h2>Select a Payment method</h2>
+
+<div class="container">
+    <div class="col-50">
+        <h3>Another Payment method</h3>
+
+        <input type="radio" id="one" name="form" value="add">
+        Add Debit/Credit/ATM Card
+        <div class="icon-container">
+            <i class="fa fa-cc-visa" style="color:navy;"></i>
+            <i class="fa fa-cc-amex" style="color:blue;"></i>
+            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+            <i class="fa fa-cc-discover" style="color:orange;"></i>
+        </div>
+
+        <input type="radio" id="two" name="form" value="net"> Net Banking
+        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+
+        <input type="radio" id="three" name="form"> UPI Payment
+        <input type="text" id="expmonth" name="expmonth" placeholder="Upi Id"/>
+        
+        <div>
+            <input type="radio" id="four" name="form"> Pay on Delivery
+        </div>
+
+    </div>
+
+    <a (click)="continue()" class="btn btn-success" type="button">Continue</a>
+</div>
+ <br> <br>

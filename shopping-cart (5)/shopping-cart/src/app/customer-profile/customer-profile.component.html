@@ -1,0 +1,115 @@
+<!--Nav bar-->
+<app-customer-inner-navbar> </app-customer-inner-navbar>
+
+<div class="container px-4 mt-4">
+  <nav class="nav nav-borders">
+      <a class="nav-link active ms-0" href="https://www.bootdey.com/snippets/view/bs5-edit-profile-account-details" target="__blank" style="font-size:13px;">Profile</a>
+  </nav>
+    <hr class="mt-0 mb-4">
+    <div class="row">
+        <div class="col-xl-4">
+            <!-- Profile picture card-->
+            <div class="card mb-4 mb-xl-0">
+                <div class="card-header" style="font-size:13px;">Profile Picture</div>
+                <div class="card-body text-center">
+                    <!-- Profile picture image-->
+                    <img class="img-account-profile rounded-circle mb-2" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8">
+            <!-- Customer details-->
+            <div class="card mb-4">
+                <div class="card-header" style="font-size:13px;">Customer Details</div>
+                <div class="card-body">
+                    <form [formGroup]="addCustomerForm">
+                         <div class="row gx-3 mb-3">
+
+                            <!-- Customer Id -->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputEmailAddress">Customer Id</label>
+                                <input class="form-control" type="text" readonly
+                                [(ngModel)]="customer.custId" formControlName="custId"
+                                id="custId" name="custId">
+                              </div>
+                            </div>
+
+                            <!-- Customer Name -->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputPhone">Customer Name</label>
+                                <input class="form-control" type="text"
+                                    [(ngModel)]="customer.custName" formControlName="custName"
+                                    id="custName" name="custName">
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="row gx-3 mb-3">
+                            <!-- Email Address -->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputEmailAddress">Email Address</label>
+                                <input readonly class="form-control" [(ngModel)]="customer.custEmail"   
+                                formControlName="custEmail" id="custEmail" name="custEmail"
+                                autocomplete="off" required>
+                            </div>
+                          </div>
+
+                            <!-- Mobile Number -->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputPhone">Mobile Number</label>
+                                <input class="form-control" type="tel"
+                                [(ngModel)]="customer.custMobile"   formControlName="custMobile"  
+                                 id="custMobile" name="custMobile">
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="row gx-3 mb-3">
+                            <!-- Gender -->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputCategory">Customer Gender</label>
+                                <input class="form-control"   [(ngModel)]="customer.gender"
+                                 formControlName="gender" id="gender" name="gender"
+                                autocomplete="off" required>
+                              </div>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputPassword">Customer Password</label>
+                                <input class="form-control" name="custPassword"
+                                [(ngModel)]="customer.custPassword"   formControlName="custPassword" 
+                                 id="custPassword">
+                              </div>
+                            </div>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="input-group input-group-lg">
+                          <label class="small mb-1" for="inputConfPassword">Confirm Password</label>
+                          <input class="form-control" name="custConfPassword"
+                          [(ngModel)]="customer.custConfPass" formControlName="custConfPass" 
+                            id="custConfPassword">
+                        </div>
+                         
+                        <!-- Address-->
+                        <div class="mb-3">
+                            <label class="small mb-1" for="inputSellerAddress">Customer Address</label>
+                            <textarea class="form-control" rows="5"  [(ngModel)]="customer.custAddress"   
+                            formControlName="custAddress" id="custAddress" ></textarea>
+                        </div>
+
+                        <!-- Save changes button-->
+                        <button class="btn btn-success btn-lg"  type="button"><b>Save changes</b></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+  </div>

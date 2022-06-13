@@ -1,0 +1,58 @@
+.card{
+    border: 1px solid black;
+}
+.header{
+    background-color: #163942;
+    padding: 7px;
+    color: white;
+}
+.rowclass{
+    padding:7px 13px 7px 19px; 
+}
+.header1
+ {
+    padding:7px 13px 7px 19px;
+    background-color:#06566e;
+    color: white;
+}
+.form-control
+{
+    font-size: 14px;
+    border-radius: 9px;
+    border-color: rgb(121, 183, 214)
+}
+.bottonCls 
+{
+    color: white;
+    background-color: #06566e;
+}
+
+.footer
+{
+color: white;
+background-color: black;
+}
+.button {
+    color: white;
+    background-color:#06566e;
+    border: 2px solid white;
+    border-radius: 15px;
+    float: right;
+    padding-left: 7px;
+    text-align: right;
+    padding-right: 9px;
+}
+.button1{
+    color: white;
+    background-color:#06566e;
+    border-radius: 8px;
+    border:none;
+    padding: 7px 13px 6px 10px;
+
+}
+.buttondiv{
+    text-align: right;
+}
+.row{
+    font-size: 16px;
+}

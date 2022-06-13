@@ -1,0 +1,14 @@
+/*nav bar css*/
+.nav-link{color: white;}
+
+.navbar-cs{
+    padding:4px;
+    font-size: 12px;
+}
+.navbar-nav{padding:0 0 0 50px;}
+
+.navbar-right{margin-right:100px;}
+
+.header-menu{
+    font-size:15px;
+}

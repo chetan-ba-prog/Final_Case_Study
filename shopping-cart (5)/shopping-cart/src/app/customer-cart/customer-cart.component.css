@@ -1,0 +1,127 @@
+
+@media(max-width:991px){
+    #heading{
+        padding-left: 50px;
+    }
+   
+    #quantity{
+        padding-left: 70px;
+    }
+    #produc{
+        padding-left: 40px;
+    }
+    #total{
+        padding-left: 54px;
+    }
+}
+@media(max-width:767px){
+    .mobile{
+        font-size: 10px;
+    }
+    h5{
+        font-size: 14px;
+    }
+    h6{
+        font-size: 9px;
+    }
+    #mobile-font{
+        font-size: 11px;
+    }
+    #prc{
+        font-weight: 700;
+        margin-left: -30px;
+        padding-left: 80px;
+    }
+    #quantity{
+        font-weight: 700;
+        padding-left: 3px;
+    }
+    #produc{
+        font-weight: 700;
+        padding-left: 0px;
+    }
+    #total{
+        font-weight: 700;
+        padding-left: 6px;
+    }
+    #image{
+        width: 60px;
+        height: 60px;
+    }
+    .col{
+        width: 100%;
+    }
+    #zero-pad{
+        padding: 2%;
+        margin-left: 10px;
+    }
+    #footer-font{
+        font-size: 12px;
+    }
+    #heading{
+        padding-top: 15px;
+    }
+}
+input, label {
+    margin: .4rem 0;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: -3px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .value-button:hover {
+    cursor: pointer;
+  }
+  
+  form #decrease {
+    margin-right: 2px;
+    border-radius: 12px 0 0 12px;
+  }
+  
+  form #increase {
+    margin-left: 2px;
+    border-radius: 0 12px 12px 0;
+  }
+  
+  form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  input#number {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 25px;
+    height: 25px;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }

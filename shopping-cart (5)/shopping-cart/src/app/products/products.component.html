@@ -1,0 +1,23 @@
+<!--navbar-->
+<app-customer-nav-bar> </app-customer-nav-bar> 
+
+<!--Product-->
+<div class="small-container">
+    <h2 class="title"> *** Products ***</h2>
+    <div class="row">
+        <div class="col-1" *ngFor="let product of products">
+            
+            <p class="hidden">{{product.prodId}}</p>
+            <a><img src="{{product.prodImage}}" width="200px"></a>
+            <br><br>
+            <p class="btn btn-info">{{product.prodCategory}} </p> <br><br>
+            <h4> {{product.prodName}} </h4>
+            <p> ₹ {{product.prodPrice}} </p>
+        
+            <div class="buttons" (click)="addToCart(product.prodId)">
+                <i class="fas fa-shopping-cart"></i>
+                <a >Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>

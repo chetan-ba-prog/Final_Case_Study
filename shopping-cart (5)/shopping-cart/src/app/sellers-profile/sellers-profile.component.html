@@ -1,0 +1,120 @@
+<!-- <app-seller-dash-header></app-seller-dash-header> -->
+
+<div class="container px-4 mt-4">
+
+    <!-- Account page navigation-->
+    <nav class="nav nav-borders">
+        <a class="nav-link active ms-0" href="https://www.bootdey.com/snippets/view/bs5-edit-profile-account-details" target="__blank" style="font-size:13px;">Profile</a>
+    </nav>
+    
+    <hr class="mt-0 mb-4">
+    <div class="row">
+        <div class="col-xl-4">
+            <!-- Profile picture card-->
+            <div class="card mb-4 mb-xl-0">
+                <div class="card-header" style="font-size:13px;">Profile Picture</div>
+                <div class="card-body text-center">
+                    <!-- Profile picture image-->
+                    <img class="img-account-profile rounded-circle mb-2" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                    <!-- Profile picture help block-->
+                    <!-- <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div> -->
+                    <!-- Profile picture upload button-->
+                    <!-- <input class="btn btn-primary m-auto" type="file"/> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8">
+            <!-- Account details card-->
+            <div class="card mb-4">
+                <div class="card-header" style="font-size:13px;">Account Details</div>
+                <div class="card-body">
+                    <form [formGroup]="addSellerForm">
+                        
+                         <!-- Form Row -->
+                         <div class="row gx-3 mb-3">
+                            <!-- Form Group (Seller Id)-->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputEmailAddress">Seller Id</label>
+                                <input class="form-control" readonly type="text" placeholder="Seller Id" 
+                                [(ngModel)]="seller.sellerId" formControlName="sellerId"
+                                id="sellerId" name="sellerId">
+                            </div>
+                          </div>
+                            <!-- Form Group (Seller Name)-->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputPhone">Seller Name</label>
+                                <input class="form-control" type="text" placeholder="Seller Name" 
+                                    [(ngModel)]="seller.sellerName" formControlName="sellerName"
+                                    id="sellerName" name="sellerName">
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Form Row -->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (Email Address)-->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputEmailAddress">Email Address</label>
+                                <input class="form-control"  readonly [(ngModel)]="seller.sellerEmail"   formControlName="sellerEmail" id="email" name="sellerEmail"
+                                placeholder="Seller Email" autocomplete="off" required>
+                            </div>
+                          </div>
+                            <!-- Form Group (Mobile Number)-->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputPhone">Mobile Number</label>
+                                <input class="form-control" type="tel" placeholder="Seller Mobile Number"
+                                [(ngModel)]="seller.sellerMobile"   formControlName="sellerMobile" 
+                                 id="sellerNumber">
+                            </div>
+                            </div>
+                        </div>
+
+                         <!-- Form Row -->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (Category)-->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputCategory">Seller category</label>
+                                <input class="form-control"  readonly [(ngModel)]="seller.sellerCategory" formControlName="sellerCategory" id="category" name="sellerCategory"
+                                placeholder="Enter Category" autocomplete="off" required>
+                            </div>
+                          </div>
+                            <!-- Form Group (Password)-->
+                            <div class="col-md-6">
+                              <div class="input-group input-group-lg">
+                                <label class="small mb-1" for="inputPassword">Seller Password</label>
+                                <input class="form-control"  placeholder="Seller Password"
+                                [(ngModel)]="seller.sellerPassword"   formControlName="sellerPassword" 
+                                 id="sellerPassword">
+                              </div>
+                            </div>
+                        </div>
+
+                        <!-- Form Group (Confirm Password)-->
+                
+                            <div class="input-group input-group-lg">
+                              <label class="small mb-1" for="inputConfPassword">Confirm Password</label>
+                              <input class="form-control"  placeholder="Seller Confirm Password"
+                              [(ngModel)]="seller.sellerConfPass"   formControlName="sellerConfPass" 
+                               id="sellerPassword">
+                            </div>
+                         
+                        <!-- Form Group (Address)-->
+                        <div class="mb-3">
+                            <label class="small mb-1" for="inputSellerAddress">Seller Address</label>
+                            <textarea class="form-control" rows="5"  [(ngModel)]="seller.sellerAddress"   
+                            formControlName="sellerAddress" id="sellerAddress" ></textarea>
+                        </div>
+
+                        <!-- Save changes button-->
+                        <button class="btn btn-success btn-lg" (click)="profileUpdate()" type="button"><b>Save changes</b></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+  </div>

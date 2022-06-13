@@ -1,0 +1,94 @@
+<app-seller-outer-nav-bar></app-seller-outer-nav-bar>
+
+<h3 class="text-center"> Sign Up </h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="card" style="border-radius: 10px;">
+                    <form [formGroup]="addSellerForm" (ngSubmit)="onSubmit()" class="frm">
+                        <div class="form-group">
+                            <i class="fa fa-user icon"></i>&nbsp;
+                            <label class="" for="sellerName">Full Name </label>
+                            <input type="text" formControlName="sellerName" class="form-control" id="sellerName" name="sellerName"
+                                placeholder="Enter Full Name" required>
+                            <div *ngIf="submitted && addSellerForm.controls.sellerName.errors" class="error">
+                                <div class="text-danger" *ngIf="addSellerForm.controls.sellerName.errors.required">Seller
+                                    Name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-mobile icon"></i> &nbsp;
+                            <label class="" for="sellerNumber">Mobile Number</label>
+                            <input type="text" formControlName="sellerMobile" class="form-control" id="sellerNumber" placeholder="Enter Mobile Number" autocomplete="off" required>
+                            <div *ngIf="submitted && addSellerForm.controls.sellerMobile.errors" class="error">
+                                <div class="text-danger" *ngIf="addSellerForm.controls.sellerMobile.errors.required">Seller
+                                    Mobile no is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-user icon"></i>&nbsp;
+                            <label class="" for="sellerEmail"> Seller Email </label>
+                            <input type="email" formControlName="sellerEmail" class="form-control" id="email" name="sellerEmail" placeholder="Enter Email Address" autocomplete="off" required>
+                            <div *ngIf="submitted && addSellerForm.controls.sellerEmail.errors" class="error">
+                                <div class="text-danger" *ngIf="addSellerForm.controls.sellerEmail.errors.required">Seller
+                                    Email is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-user icon"></i>&nbsp;
+                            <label class="" for="sellerCategory">Category </label>
+                            <select formControlName="sellerCategory" style="height:30px;" class="form-control" id="sellerCategory" 
+                            name="sellerCategory"  required >
+                                <option value="" disabled selected hidden> -- Select Category -- </option>
+                                <option value="ELECTRONICS">ELECTRONICS</option>
+                                <option value="CLOTHING">CLOTHING</option>
+                                <option value="FOOTWEAR">FOOTWEAR</option>
+                                <option value="SKIN">SKIN</option>
+                            </select>
+                            <div *ngIf="submitted && addSellerForm.controls.sellerCategory.errors" class="error">
+                                <div class="text-danger" *ngIf="addSellerForm.controls.sellerCategory.errors.required">Seller
+                                    Category is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-address-card-o"></i> &nbsp;
+                            <label for="sellerAddress">Address</label>
+                            <textarea class="form-control" formControlName="sellerAddress" rows="3" id="sellerAddress" name="sellerAddress"
+                                placeholder="Enter Address" required></textarea>
+                            <div *ngIf="submitted && addSellerForm.controls.sellerAddress.errors" class="error">
+                                <div class="text-danger" *ngIf="addSellerForm.controls.sellerAddress.errors.required">Seller
+                                    Address is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-key icon"></i> &nbsp;
+                            <label for="sellerPassword">Password</label>
+                            <input type="password" class="form-control" formControlName="sellerPassword" id="sellerPassword" 
+                            name="sellerPassword"  placeholder="*********">
+                            <div *ngIf="submitted && addSellerForm.controls.sellerPassword.errors" class="error">
+                                <div class="text-danger" *ngIf="addSellerForm.controls.sellerPassword.errors.required">Seller
+                                    Password is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-key icon"></i> &nbsp;
+                            <label for="sellerConfPass">Confirm Password</label>
+                            <input type="password" class="form-control" formControlName="sellerConfPass" id="sellerConfPass" 
+                                name="sellerConfPass" placeholder="*********">
+                            <div *ngIf="submitted && addSellerForm.controls.sellerConfPass.errors" class="error">
+                                <div class="text-danger" *ngIf="addSellerForm.controls.sellerConfPass.errors.required">Seller
+                                    Cnf Password is required</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success">Sign Up</button>
+                        <br><br>
+                        <div class="signin">
+                            <p>Already have an account? <a routerLink="/seller-login">Sign in</a>.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

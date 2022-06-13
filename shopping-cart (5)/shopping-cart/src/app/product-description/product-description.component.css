@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.main{
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-100%,-50%);
+}
+input{
+    border: 3px solid darkblue;
+    height: 40px;
+    width: 300px;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+.btn{
+    color: blue;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    display: flex;
+    align-items: right;   
+}
+
+.rows{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.small-container{
+    text-align: flex;
+    max-width: 800px;
+    margin: 300px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.buttons{
+    margin: 8%;
+    padding: 3%;
+    width: 200px;
+    text-align: center;
+    background: lightblue;
+    color: black;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    user-select: none;
+    transition: .25s;
+    position: relative;
+}
+
+.buttons i{
+    color: #ff0000;
+    font-size: 17px;
+    position: absolute;
+    top: 48.5%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    transition: .25s;
+}
+
+.buttons span{
+    font-weight: bold;
+    font-size: 15px; 
+    text-transform: uppercase;
+    margin-left: 20px;
+    transition: .25s;
+    font-family: nike combat stencil;
+    clip-path: circle(200px at 125px 27.5px);
+}
+
+.buttons:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+
+.buttons:hover i{
+    left: 50%;
+}
+
+.buttons:hover span{
+    clip-path: circle(0px at 125px 27.5px);
+}
+
+/*---Single Product----*/
+.single{
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.single .col-2 img{
+    padding: 0;
+}
+
+.single .col-2{
+    padding: 20px;
+}
+
+.single h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.single select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+ 
+}
+
+.single input{
+    width: 100px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px  solid ;
+}
+
+.single .fa{
+    color: #ff523b;
+    margin-left: 10px;
+}
+
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.col-2{
+    flex-basis: 60%;
+    min-width: 450px;
+}
+
+.col-2 h1{
+    font-style: italic;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 10px 0;
+    color: rgba(176, 12, 20, 0.847);
+}
+
+.col-5 {
+    flex-basis: 25%;
+    padding: 20px;
+    min-width: 100px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;  
+}
+
+.col-5 img{
+    width: 100%;
+}
+
+.col-5:hover {
+    transform: translateY(-5px)
+}
+
+.small-containers{
+    text-align: center;
+    max-width: 1080px;
+    margin: auto;
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 40px;
+    color: black;
+}
+
+.title::after{
+    content: '';
+    background: #ff0000;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}

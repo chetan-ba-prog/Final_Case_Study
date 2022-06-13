@@ -1,0 +1,185 @@
+<!-- <app-seller-dash-header></app-seller-dash-header> -->
+
+<div class="container px-4 mt-4">
+    <hr class="mt-0 mb-4">
+    <div class="row">
+        <div class="container-fluid mt-1">
+            <div class="card">
+                <div class=" d-flex justify-content-between header  ">
+                    <div class="col-md-6">
+                        <div> Add Product </div>
+                    </div>
+                </div>
+                <!-- Product Details -->
+                <div class="card-body">
+                    <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()" class="frm">
+                        <div class="row rowclass">
+                            <div class="col-md-12 header1">Product Details</div>
+                        </div>
+
+                        <div class="row mt-1 rowclass">
+
+                            <div class="col-md-6 mt-1">
+                                <div class="row form-group">
+                                    <div class="col-md-4">Seller Id:</div>
+                                    <div class="col-md-8">
+                                        <input type="text" readonly formControlName="sellerId" class="form-control"
+                                            id="sellerId" name="sellerId" [(ngModel)]="sellerId"
+                                            placeholder="Enter Seller Id" required autocomplete="off">
+                                    </div>
+                                    <!-- <div *ngIf="submitted && addProductForm.controls.sellerId.errors" class="error">
+                                        <div class="text-danger"
+                                            *ngIf="addProductForm.controls.sellerId.errors.required">Seller
+                                            Id is required</div>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mt-1">
+                                <div class="row form-group">
+                                    <div class="col-md-4">Product Name:</div>
+                                    <div class="col-md-8">
+                                        <input type="text" formControlName="prodName" class="form-control" id="prodName"
+                                            name="prodName" placeholder="Enter Product Name" required
+                                            autocomplete="off">
+                                    </div>
+                                    <!-- <div *ngIf="submitted && addProductForm.controls.prodName.errors" class="error">
+                                        <div class="text-danger"
+                                            *ngIf="addProductForm.controls.prodName.errors.required">Product
+                                            Name is required</div>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mt-1">
+                                <div class="row form-group">
+                                    <div class="col-md-4">Product Category</div>
+                                    <div class="col-md-8">
+                                        <select name="prodCategory" formControlName="prodCategory" required
+                                            id="prodCategory" style="height:30px;" class="form-control">
+                                            <option value="" disabled selected hidden> -- Select Category -- </option>
+                                            <option value="ELECTRONICS">ELECTRONICS</option>
+                                            <option value="CLOTHING">CLOTHING</option>
+                                            <option value="FOOTWEAR">FOOTWEAR</option>
+                                            <option value="SKIN">SKIN</option>
+                                        </select>
+                                    </div>
+                                    <!-- <div *ngIf="submitted && addProductForm.controls.prodCategory.errors" class="error">
+                                        <div class="text-danger"
+                                            *ngIf="addProductForm.controls.prodCategory.errors.required">Product
+                                            Category
+                                            required</div>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mt-1">
+                                <div class="row form-group">
+                                    <div class="col-md-4">Product Status</div>
+                                    <div class="col-md-8">
+                                        <select name="prodStatus"  formControlName="prodStatus" required id="prodStatus"
+                                            style="height:30px;" class="form-control">
+                                            <option value="" disabled selected hidden> -- Select Status -- </option>
+                                            <option value="Available"> Available</option>
+                                            <option value="Not Available"> Not Available</option>
+                                        </select>
+                                    </div>
+                                    <!-- <div *ngIf="submitted && addProductForm.controls.prodStatus.errors" class="error">
+                                        <div class="text-danger"
+                                            *ngIf="addProductForm.controls.prodStatus.errors.required">Product
+                                            Status is required</div>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mt-1">
+                                <div class="row form-group">
+                                    <div class="col-md-4">Product Price:</div>
+                                    <div class="col-md-8">
+                                        <input type="number" formControlName="prodPrice" class="form-control"
+                                            id="prodPrice" name="prodPrice" placeholder="Enter Product Price" required
+                                            autocomplete="off">
+                                    </div>
+                                    <!-- <div *ngIf="submitted && addProductForm.controls.prodPrice.errors" class="error">
+                                        <div class="text-danger"
+                                            *ngIf="addProductForm.controls.prodPrice.errors.required">Product
+                                            Price is required</div>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mt-1">
+                                <div class="row form-group">
+                                    <div class="col-md-4">Product Discount:</div>
+                                    <div class="col-md-8">
+                                        <input type="text" formControlName="prodDiscount" class="form-control"
+                                            id="prodDiscount" name="prodDiscount" placeholder="Enter Product Discount"
+                                            required autocomplete="off">
+                                    </div>
+                                    <!-- <div *ngIf="submitted && addProductForm.controls.prodDiscount.errors" class="error">
+                                        <div class="text-danger"
+                                            *ngIf="addProductForm.controls.prodDiscount.errors.required">Product
+                                            Discount is required</div>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mt-1">
+                                <div class="row form-group">
+                                    <div class="col-md-4">Product Description:</div>
+                                    <div class="col-md-8">
+                                        <textarea rows="2" cols="45" formControlName="prodDesc" class="form-control"
+                                            id="prodDesc" name="prodDesc" required
+                                            autocomplete="off"> Enter Product Descriptions </textarea>
+                                    </div>
+                                    <!-- <div *ngIf="submitted && addProductForm.controls.prodDesc.errors" class="error">
+                                        <div class="text-danger"
+                                            *ngIf="addProductForm.controls.prodDesc.errors.required">Product
+                                            Description is required</div>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mt-1">
+                                <div class="row form-group">
+                                    <div class="col-md-4">Product Image:</div>
+                                    <div class="col-md-8">
+                                        <!-- <input type="file" class="form-control"> -->
+                                        <input type="file" formControlName="prodImage" class="form-control"
+                                            id="prodImage" name="prodImage" placeholder="Enter Product Image" required
+                                            autocomplete="off" style="height: 40px;">
+                                    </div>
+                                    <!-- <div *ngIf="submitted && addProductForm.controls.prodImage.errors" class="error">
+                                        <div class="text-danger"
+                                            *ngIf="addProductForm.controls.prodImage.errors.required">Product
+                                            Image is required</div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2 ">
+                            <div class="col-md-5">
+                                <!-- <div class="buttondiv">
+                                    <button class="button1" (click)="reset()">
+                                        <i class="fa fa-backward"></i>
+                                        &nbsp;&nbsp;Reset</button>
+                                </div> -->
+                            </div>
+                            <div class="col-md-3">
+                                <div class="buttonndiv">
+                                    <button class="button1">
+                                        <i class="fa fa-backward"></i>
+                                        &nbsp;&nbsp;Submit</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+    </div>
+</div>
